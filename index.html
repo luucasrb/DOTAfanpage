@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet">
+	<title>Dota 2</title>
+	<link rel= "icon" href="img/logo2.png">
+
+	<script>
+		function funcao1(){
+			alert("Você foi cadastrado no jogo!");
+		}
+		function funcao2(){
+			alert("Seja Bem-Vindo!");
+		}
+		function funcao3(){
+			alert ("Funcao Indisponível");
+		}
+
+		function funcao4(){
+			alert ("Refazer senha");
+		}
+
+		function quiz(){
+			var score,q1,q2,q3,q4,q5;
+			score = 0;
+
+			q1 = prompt("Qual personagem tem como ultimate trocar de vida com um alvo?")
+			if(q1 == "Terrorblade") {
+				score++;
+				alert("Correto! Score:"+score);
+				q2 = prompt("Qual personagem tem como ultimate roubar a ultima skill de um inimigo?")
+				if(q2 == "Rubick") {
+					score++;
+					alert("Correto! Score:"+score);
+
+					q3 = prompt("Qual personagem tem uma passiva de quebra de mana?")
+					if(q3 == "Antimage") {
+						score++;
+						alert("Correto! Score final:"+score);
+
+						q4 = prompt("Quantas skills possui o heroi Invoker?")
+						if(q4 == "10") {
+							score++;
+							alert("Correto! Score:"+score);
+
+							q5 = prompt("Qual item tem como finalidade dar visão de mapa ")
+							if(q5 == "Ward") {
+								score++;
+								alert("Parabens, você acertou tudo! Score final:"+score);
+							} else {
+								alert("Errou feio, errou rude.Score final:"+score);
+							}
+						} else {
+							alert("Errou feio, errou rude.Score final:"+score);
+						}
+					} else {
+						alert("Errou feio, errou rude.Score final:"+score);
+					}
+				} else {
+					alert("Errou feio, errou rude!Score final:"+score);
+				}
+			} else {
+				alert("Errou feio, errou rude.Score final:"+score);
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+
+
+
+	<div class="interface">
+		<nav>
+			<ul class="menu">
+				<li style="margin-left: 1%;"><a class="active" href="index.html" >Home</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="herois.html">Herois</a></li>
+				<li><a href="meta.html">Meta</a></li>
+				<li style="float:right; position: relative; margin: 2px 100px 0px 0px;"><img src="img/logo2.png" class="img-logo"></li>
+			</ul>
+		</nav>
+
+		<header style="background-color: rgba(0, 0, 0, 0.483);">
+				<h3 style="color:white; font-size: 40px; text-align: center; padding-top: 10px; margin-top: 4%;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;">Entre e comece a jogar!</h3>
+		</header>
+
+		<div class="formulario">
+			<form>
+				<legend style="margin-left: 40%; font-weight: bold";>Cadastro</legend>
+				<label for="fname">Nome</label>
+				<input type="text" id="fname" name="firstname" placeholder="Digite seu nome" maxlength="20">
+					<label for="nname">Nickname</label>
+				<input type="text" id="nname" name="nickname" placeholder="Escolha seu nickname" maxlength="12">
+					<label for= "ssenha">Senha</label>
+				<input type="password" id="ssenha" name="senha" placeholder="Escolha uma senha" maxlength="12">
+					<label for="country">País</label>
+					<select id="country" name="country">
+						<option value="australia">Austrália</option>
+						<option value="canada">Canadá</option>
+						<option value="eua">EUA</option>
+						<option value="br">Brasil</option>
+					</select>
+
+				<label for="email">E-mail</label>
+				<input type="email" id="email" name="nemail" placeholder="email@email.com" maxlength="40">
+
+				<input type="submit" value="Cadastrar" onclick="funcao1()">
+			</form>
+		</div>
+
+		<div class= "login">
+			<form>
+				<legend style="margin-left: 40%; font-weight: bold;">Login</legend>
+				<label for="nname">Nickname</label>
+				<input type="text" id="nname" name="nickname" placeholder="Digite seu nickname" maxlength="12">
+
+				<label for= "ssenha">Senha</label>
+				<input type="password" id="ssenha" name="senha" placeholder="Digite sua senha" maxlength="12">
+				<input type="button" value= "Esqueci" onclick="funcao4()">
+
+				<input type="submit" value="Login" onclick="funcao2()">
+			</form>
+		</div>
+		<div class="vertical-menu">
+			<a class="active"> <b>Mais sobre o Dota 2</b</a>
+			<a href="sobre.html">Sobre</a>
+			<a href="herois.html">Heróis</a>
+			<a href="meta.html">Meta</a>
+			<a href="http://br.dota2.com/?l=brazilian" target="_blank">Site Oficial</a>
+			<a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" style="color: white; background-color: black;">Download</a>
+			<a><audio controls style="width: 100%;">
+				<source src="Dota2-music.mp3" type="audio/mp3">
+					Navegador não suporta áudio.
+				</audio></a>
+			<input value="Quiz" onclick="quiz()" class="quizbut">
+		</div>
+
+		<footer>
+			Developed by Will & Lucas
+		</footer>
+	</div>
+</body>
+<html>
